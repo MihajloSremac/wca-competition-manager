@@ -1,1 +1,3 @@
 # wca-competition-manager
+
+This project is a simple Java CLI application for managing and reporting on WCA-style competitions. It uses a layered architecture with DAO, Service, DTO, and UIHandler classes, and connects to a relational database via JDBC. The application allows users to view reports on competitions, participants, and results, as well as to add sponsors and link them to competitions. The database schema includes several related tables, and the application demonstrates basic CRUD operations, reporting queries, and a transactional operation. The focus is on clear separation of concerns and practical use of JDBC in a multi-layered structure.
