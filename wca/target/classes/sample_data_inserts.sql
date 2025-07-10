@@ -22,7 +22,6 @@ INSERT INTO Disciplina (ID_DSC, NAZ_DSC) VALUES (2, '2x2x2 Cube');
 INSERT INTO Disciplina (ID_DSC, NAZ_DSC) VALUES (3, '4x4x4 Cube');
 INSERT INTO Disciplina (ID_DSC, NAZ_DSC) VALUES (4, 'Pyraminx');
 INSERT INTO Disciplina (ID_DSC, NAZ_DSC) VALUES (5, 'Skewb');
--- DODATNE DISCIPLINE
 INSERT INTO Disciplina (ID_DSC, NAZ_DSC) VALUES (6, '5x5x5 Cube');
 INSERT INTO Disciplina (ID_DSC, NAZ_DSC) VALUES (7, '6x6x6 Cube');
 INSERT INTO Disciplina (ID_DSC, NAZ_DSC) VALUES (8, 'Megaminx');
@@ -37,8 +36,8 @@ INSERT INTO Oprema (ID_OPR, NAZ_OPR, STNJ_OPR, MDL_OPR) VALUES (2, 'Rubik''s 3x3
 INSERT INTO Oprema (ID_OPR, NAZ_OPR, STNJ_OPR, MDL_OPR) VALUES (3, 'Rubik''s 4x4', 'Novo', 'MoYu Aosu');
 
 -- Sponzori
-INSERT INTO Sponzor (ID_SPZ, NAZ_SPZ, VRS_SPZ, USL_SPZ) VALUES (1, 'CubeShop', 'Zlatni', 'Poklon vaučeri za pobednike');
-INSERT INTO Sponzor (ID_SPZ, NAZ_SPZ, VRS_SPZ, USL_SPZ) VALUES (2, 'SpeedCube.rs', 'Srebrni', 'Obezbeđuje opremu');
+INSERT INTO Sponzor (ID_SPZ, NAZ_SPZ, VRS_SPZ, USL_SPZ) VALUES (1, 'CubeShop', 'Novcana', 'Plakati postavljeni po sali');
+INSERT INTO Sponzor (ID_SPZ, NAZ_SPZ, VRS_SPZ, USL_SPZ) VALUES (2, 'SpeedCube.rs', 'Nagrade', 'Nema uslova');
 
 -- Organizatori
 INSERT INTO Organizator (ID_CLN) VALUES (1);
@@ -69,7 +68,6 @@ INSERT INTO Sadrzi (Takmicenje_ID_TKM, Disciplina_ID_DSC) VALUES (1, 1);
 INSERT INTO Sadrzi (Takmicenje_ID_TKM, Disciplina_ID_DSC) VALUES (1, 2);
 INSERT INTO Sadrzi (Takmicenje_ID_TKM, Disciplina_ID_DSC) VALUES (2, 3);
 INSERT INTO Sadrzi (Takmicenje_ID_TKM, Disciplina_ID_DSC) VALUES (2, 4);
--- DODATNI SADRZI
 INSERT INTO Sadrzi (Takmicenje_ID_TKM, Disciplina_ID_DSC) VALUES (1, 6);
 INSERT INTO Sadrzi (Takmicenje_ID_TKM, Disciplina_ID_DSC) VALUES (2, 7);
 INSERT INTO Sadrzi (Takmicenje_ID_TKM, Disciplina_ID_DSC) VALUES (2, 8);
@@ -100,25 +98,24 @@ INSERT INTO Takmici_se (Takmicar_ID_CLN, Takmicenje_ID_TKM) VALUES (9, 2);
 INSERT INTO Takmici_se (Takmicar_ID_CLN, Takmicenje_ID_TKM) VALUES (10, 2);
 
 -- Rezultat
--- Rezultat (svi inserti idu nakon svih potrebnih Takmici_se)
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (1, 8.23, 'PB', 3, 1, 1, 1);
+VALUES (1, 8.23, 'Srebrna', 3, 1, 1, 1);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (2, 2.15, 'PB', 4, 1, 1, 2);
+VALUES (2, 2.15, 'Srebrna', 4, 1, 1, 2);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (3, 45.67, NULL, 5, 2, 2, 3);
+VALUES (3, 45.67, 'Bronzana', 5, 2, 2, 3);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (4, 9.01, NULL, 3, 1, 1, 1);
+VALUES (4, 9.01, 'Bronzana', 3, 1, 1, 1);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (5, 7.88, NULL, 4, 1, 1, 1);
+VALUES (5, 7.88, 'Zlatna', 4, 1, 1, 1);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (6, 2.30, NULL, 3, 1, 1, 2);
+VALUES (6, 2.30, 'Bronzana', 3, 1, 1, 2);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (7, 2.05, NULL, 4, 1, 1, 2);
+VALUES (7, 2.05, 'Zlatna', 4, 1, 1, 2);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (8, 44.12, NULL, 5, 2, 2, 3);
+VALUES (8, 44.12, 'Zlatna', 5, 2, 2, 3);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (9, 46.00, NULL, 3, 2, 2, 3);
+VALUES (9, 46.00, 'Srebrna', 3, 2, 2, 3);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
 VALUES (10, 8.50, NULL, 6, 1, 1, 1);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
@@ -129,19 +126,18 @@ INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takm
 VALUES (13, 45.10, NULL, 9, 2, 2, 3);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
 VALUES (14, 8.10, NULL, 10, 2, 2, 3);
--- DODATNI REZULTATI ZA NOVE DISCIPLINE
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (15, 120.50, NULL, 6, 1, 1, 6);
+VALUES (15, 120.50, 'Srebrna', 6, 1, 1, 6);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (16, 118.30, NULL, 7, 1, 1, 6);
+VALUES (16, 118.30, 'Zlatna', 7, 1, 1, 6);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (17, 210.00, NULL, 8, 2, 2, 7);
+VALUES (17, 210.00, 'Srebrna', 8, 2, 2, 7);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (18, 205.75, NULL, 9, 2, 2, 7);
+VALUES (18, 205.75, 'Zlatna', 9, 2, 2, 7);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (19, 320.10, NULL, 10, 2, 2, 8);
+VALUES (19, 320.10, 'Srebrna', 10, 2, 2, 8);
 INSERT INTO Rezultat (ID_REZ, VRM_REZ, POD_REZ, Takmici_se_Takmicar_ID_CLN, Takmici_se_Takmicenje_ID_TKM, Sadrzi_Takmicenje_ID_TKM, Sadrzi_Disciplina_ID_DSC)
-VALUES (20, 315.80, NULL, 8, 2, 2, 8);
+VALUES (20, 315.80, 'Zlatna', 8, 2, 2, 8);
 
 -- Primer za Uplatu i Uplacuje
 INSERT INTO Uplata (ID_UPL, IZN_UPL, DAT_UPL) VALUES (1, 1500, DATE '2025-03-01');

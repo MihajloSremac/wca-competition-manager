@@ -1,5 +1,6 @@
 package com.wca;
 
+import com.wca.config.DatabaseConnection;
 import com.wca.uihandler.TakmicenjeUIHandler;
 
 public class App {
@@ -7,7 +8,7 @@ public class App {
         // Test konekcije na bazu
         try {
             System.out.println("Testiranje konekcije sa bazom podataka...");
-            java.sql.Connection conn = com.wca.config.DatabaseConnection.getConnection();
+            java.sql.Connection conn = DatabaseConnection.getConnection();
             if (conn != null) {
                 System.out.println("Povezivanje sa bazom podataka uspesno!");
                  System.out.println("=== WCA User Management System ===");
@@ -21,7 +22,7 @@ public class App {
             return;
         }
 
-        TakmicenjeUIHandler handler = new com.wca.uihandler.TakmicenjeUIHandler();
+        TakmicenjeUIHandler handler = new TakmicenjeUIHandler();
         handler.start();
     }
 }

@@ -10,8 +10,9 @@ public class SponzorTransakcijaDAO {
     public void dodajSponzoraITakmicenje(SponzorTransakcijaDTO dto) throws Exception {
         try {
             conn.setAutoCommit(false);
-            // 1. Insert into Sponzor
+            //Insert into Sponzor
             int idSponzor = -1;
+            //nvl vraca default vrednost (u mom slucaju 0), ako imam NULL umesto neke vrednosti
             try (Statement st = conn.createStatement(); ResultSet rs = st.executeQuery("SELECT NVL(MAX(ID_SPZ),0)+1 FROM Sponzor")) {
                 if (rs.next()) idSponzor = rs.getInt(1);
             }
@@ -24,7 +25,7 @@ public class SponzorTransakcijaDAO {
                 ps.setString(4, dto.getUslovi());
                 ps.executeUpdate();
             }
-            // 2. Insert into Sponzorise
+            //Insert into Sponzorise
             try (PreparedStatement ps2 = conn.prepareStatement(
                 "INSERT INTO Sponzorise (Sponzor_ID_SPZ, Takmicenje_ID_TKM) VALUES (?, ?)")) {
                 ps2.setInt(1, idSponzor);
