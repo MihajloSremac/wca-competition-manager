@@ -1,0 +1,24 @@
+DELETE FROM Uplacuje;
+DELETE FROM Uplata;
+DELETE FROM Rezultat;
+DELETE FROM Trenira;
+DELETE FROM Finansira;
+DELETE FROM Nadgleda;
+DELETE FROM Koristi;
+DELETE FROM Sponzorise;
+DELETE FROM Sponzor;
+DELETE FROM Takmici_se;
+DELETE FROM Sadrzi;
+DELETE FROM Organizuje;
+DELETE FROM Odrzava_se;
+DELETE FROM Takmicar;
+DELETE FROM Junior_delegat;
+DELETE FROM Delegat;
+DELETE FROM Organizator;
+DELETE FROM Disciplina;
+DELETE FROM Oprema;
+DELETE FROM Sala;
+DELETE FROM Takmicenje;
+DELETE FROM Clan;
+
+COMMIT;
