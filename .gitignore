@@ -49,4 +49,17 @@ Thumbs.db
 
 # Logs
 logs/
-*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment and config
+.env
+.env.local
+*.properties.local
+database.properties.local
+
+# Maven wrapper (if you want to include it, remove this section)
+# .mvn/wrapper/maven-wrapper.properties
